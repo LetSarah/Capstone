@@ -1,11 +1,144 @@
-body {
-    font-family: 'Raleway', sans-serif;
+*body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(235, 235, 235);
+  overflow: hidden;
 }
 
-h2 {
-    color: blueviolet;
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(235, 235, 235);
+  /* How can I get the nav bar flush with the top?*/
 }
 
-h3 {
-    color: crimson;
+.logo {
+  color: grey;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
 }
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: rgb(255, 0, 119);
+}
+/*Why did my hover effect stop working?*/
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: gray;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 700%;
+  display: flex;
+  overflow: hidden;
+  animation: animate 20s linear infinite;
+}
+
+.hero .container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero .container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.hero .container .content {
+  position: center;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  background: (0, 0, 0, 0.5);
+}
+
+@keyframes animate {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: -100%;
+  }
+  20% {
+    left: -100%;
+  }
+  30% {
+    left: -200%;
+  }
+  40% {
+    left: -200%;
+  }
+  50% {
+    left: -300%;
+  }
+  60% {
+    left: -300%;
+  }
+  70% {
+    left: -400%;
+  }
+  80% {
+    left: -400%;
+  }
+  90% {
+    left: -500%;
+  }
+  -100% {
+    left: 0;
+  }
+}
+/* How do I get the images to slow down?
+Can I make it a smoother transition? 
+How can I get the images BELOW the nav bar not under it?
+Why are they not centered? 
+How do I get it to keep scolling rather than clicking back to the main image?
+How can I get the "place holder" text over top of the images? 
+My links were working until I added the image scroller*/
+
+.about {
+  position: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(235, 235, 235);
+}
+/*Why isn't this end to end on the screen?*/
